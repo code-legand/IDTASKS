@@ -120,13 +120,12 @@ class Ui_MainWindow(object):
     def keyPressEvent(self, event):
         key = event.key()
         if key == QtCore.Qt.Key_R:
-            print("Rock")
+            # print("Rock")
             user_move = 0
             system_move = randint(0, 2)
             self.textEdit_2.setHtml("<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\"D:\\interndev\\task-2\\rock.png\" /></p></body></html>")
             self.textEdit.setHtml("<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\"D:\\interndev\\task-2\\{}.png\" /></p></body></html>".format(moves[system_move]))
             res_index = pairs[(user_move, system_move)]
-            print("<img src='D:\\interndev\\task-2\\{}.png\" />".format(moves[system_move]))
 
             self.lineEdit.setText(result[res_index])
             if res_index == 0:
@@ -136,13 +135,12 @@ class Ui_MainWindow(object):
             self.score_check()
 
         elif key == QtCore.Qt.Key_P:
-            print("Paper")
+            # print("Paper")
             user_move = 1
             system_move = randint(0, 2)
             self.textEdit_2.setHtml("<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\"D:\\interndev\\task-2\\paper.png\" /></p></body></html>")
             self.textEdit.setHtml("<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\"D:\\interndev\\task-2\\{}.png\" /></p></body></html>".format(moves[system_move]))
             res_index = pairs[(user_move, system_move)]
-            print("<img src='D:\\interndev\\task-2\\{}.png\" />".format(moves[system_move]))
 
             self.lineEdit.setText(result[res_index])
             if res_index == 0:
@@ -153,13 +151,12 @@ class Ui_MainWindow(object):
 
         
         elif key == QtCore.Qt.Key_S:
-            print("Scissor")
+            # print("Scissor")
             user_move = 2
             system_move = randint(0, 2)
             self.textEdit_2.setHtml("<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\"D:\\interndev\\task-2\\scissor.png\" /></p></body></html>")
             self.textEdit.setHtml("<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\"D:\\interndev\\task-2\\{}.png\" /></p></body></html>".format(moves[system_move]))
             res_index = pairs[(user_move, system_move)]
-            print("<img src='D:\\interndev\\task-2\\{}.png\" />".format(moves[system_move]))
             self.lineEdit.setText(result[res_index])
             if res_index == 0:
                 self.lcdNumber.display(self.lcdNumber.intValue() + 1)
